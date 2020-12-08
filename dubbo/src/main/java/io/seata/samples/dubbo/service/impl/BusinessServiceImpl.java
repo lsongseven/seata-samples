@@ -42,8 +42,8 @@ public class BusinessServiceImpl implements BusinessService {
     public void purchase(String userId, String commodityCode, int orderCount) {
         LOGGER.info("purchase begin ... xid: " + RootContext.getXID());
         storageService.deduct(commodityCode, orderCount);
-        orderService.create(userId, commodityCode, orderCount);
-        //throw new RuntimeException("xxx");
+        throw new RuntimeException("xxx");
+//        orderService.create(userId, commodityCode, orderCount);
 
     }
 
